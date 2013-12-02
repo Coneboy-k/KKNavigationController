@@ -116,10 +116,18 @@
     CGFloat y = x*aa;
 
     CGFloat lastScreenShotViewHeight = kkBackViewHeight;
-    
+/**
+ *  if u use self.edgesForExtendedLayout = UIRectEdgeNone; pls add
+
     if (!iOS7) {
         lastScreenShotViewHeight = lastScreenShotViewHeight - 20;
     }
+ *
+ */
+
+    
+
+    
     [lastScreenShotView setFrame:CGRectMake(startBackViewX+y,
                                             0,
                                             kkBackViewWidth,
