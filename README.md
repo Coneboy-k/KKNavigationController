@@ -4,7 +4,7 @@ KKNavigationController
 
 This is a NavigationController about Parallax,it like 网易app
 
-[![](https://github.com/Coneboy-k/)]
+[![](https://github.com/Coneboy-k/KKNavigationController/blob/master/SHOW_GIF/18.gif?raw=true)]
 
 ## Requirements
 KKNavigationController works on any iOS version. Only ARC.
