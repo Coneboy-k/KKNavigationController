@@ -116,6 +116,8 @@
     CGFloat y = x*aa;
 
     CGFloat lastScreenShotViewHeight = kkBackViewHeight;
+    
+    //TODO: FIX self.edgesForExtendedLayout = UIRectEdgeNone  SHOW BUG
 /**
  *  if u use self.edgesForExtendedLayout = UIRectEdgeNone; pls add
 
@@ -124,10 +126,6 @@
     }
  *
  */
-
-    
-
-    
     [lastScreenShotView setFrame:CGRectMake(startBackViewX+y,
                                             0,
                                             kkBackViewWidth,
