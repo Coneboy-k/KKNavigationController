@@ -18,9 +18,6 @@
     
     UIImageView *lastScreenShotView;
     UIView *blackMask;
-    
-    // 模糊图片的图片
-    UIImage *captureImg;
 
 }
 
