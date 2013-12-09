@@ -130,7 +130,6 @@
                                             0,
                                             kkBackViewWidth,
                                             lastScreenShotViewHeight)];
-
 }
 
 
