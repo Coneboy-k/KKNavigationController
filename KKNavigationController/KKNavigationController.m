@@ -115,19 +115,13 @@
     CGFloat aa = abs(startBackViewX)/kkBackViewWidth;
     CGFloat y = x*aa;
 
-    CGFloat lastScreenShotViewHeight = kkBackViewHeight;
+    UIImage *lastScreenShot = [self.screenShotsList lastObject];
+    CGFloat lastScreenShotViewHeight = lastScreenShot.size.height;
+    CGFloat superviewHeight = lastScreenShotView.superview.frame.size.height;
+    CGFloat verticalPos = superviewHeight - lastScreenShotViewHeight;
     
-    //TODO: FIX self.edgesForExtendedLayout = UIRectEdgeNone  SHOW BUG
-/**
- *  if u use self.edgesForExtendedLayout = UIRectEdgeNone; pls add
-
-    if (!iOS7) {
-        lastScreenShotViewHeight = lastScreenShotViewHeight - 20;
-    }
- *
- */
     [lastScreenShotView setFrame:CGRectMake(startBackViewX+y,
-                                            0,
+                                            verticalPos,
                                             kkBackViewWidth,
                                             lastScreenShotViewHeight)];
 
