@@ -61,6 +61,7 @@
     
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self
                                                                                 action:@selector(paningGestureReceive:)];
+    [recognizer setDelegate:self];
     [recognizer delaysTouchesBegan];
     [self.view addGestureRecognizer:recognizer];
 }
@@ -134,6 +135,15 @@
 }
 
 #pragma mark - Gesture Recognizer -
+//不响应的手势则传递下去
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if (self.viewControllers.count <= 1 || !self.canDragBack){
+        return NO;
+    }
+    return YES;
+}
+
 
 - (void)paningGestureReceive:(UIPanGestureRecognizer *)recoginzer
 {
