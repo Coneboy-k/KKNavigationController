@@ -101,7 +101,7 @@
 
 - (void)moveViewWithX:(float)x
 {
-    x = x>320?320:x;
+    x = x>self.view.bounds.size.width?self.view.bounds.size.width:x;
     x = x<0?0:x;
     
     CGRect frame = self.view.frame;
